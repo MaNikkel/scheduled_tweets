@@ -1,0 +1,10 @@
+<h1>Twitter Accounts</h1>
+
+
+
+<% @twitter_accounts.each do |twitter_account| %>
+  <li>
+    <%= twitter_account.username%>
+    <%= button_to "Disconect", twitter_account, method: :delete, data: { confirm: 'certeza?' }%>
+  </li>
+<% end %>

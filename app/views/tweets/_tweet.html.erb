@@ -1,0 +1,10 @@
+<div class="mb-3">
+  <%= tweet.body %>
+
+  <% if tweet.published? %>
+    <%= link_to "View tweet", "https://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}" %>
+  <% else %>
+    <%= l tweet.publish_at, format: :short%>
+    <%= link_to "Edit Tweet", edit_tweet_path(tweet)%>
+  <% end %>
+</div>
